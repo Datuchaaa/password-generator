@@ -1,4 +1,3 @@
-// PasswordGenerator.tsx
 import React, { useState } from "react";
 import "./PasswordGenerator.scss";
 
@@ -41,13 +40,15 @@ const PasswordGenerator: React.FC = () => {
           />
         </div>
         <button onClick={generatePassword}>Generate Password</button>
-        
-        <div>
-          <strong>Generated Password:</strong>
-          <p>{password}</p>
-          <button onClick={copyToClipboard}>Copy Password</button>
         </div>
-      </div>
+        {password && (
+          <div>
+            <strong>Generated Password:</strong>
+            <p>{password}</p>
+            <button onClick={copyToClipboard}>Copy Password</button>
+          </div>
+        )}
+      
     </div>
   );
 };
