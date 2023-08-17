@@ -3,7 +3,7 @@ import "./PasswordGenerator.scss";
 
 const PasswordGenerator: React.FC = () => {
   const [password, setPassword] = useState("");
-  const [length, setLength] = useState(12);
+  const [length, setLength] = useState(9);
 
   const generatePassword = () => {
     const charset =
